@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/media/style.css" />
+    <title>Registro de Pacientes</title>
+  </head>
+  <body>
+    <a
+      title="linkedin de Diego Simonelli"
+      href="https://www.linkedin.com/in/diego-ariel-simonelli-87b8b986/"
+      ><img src="{{url_for('static', filename='media/Historia_Clinica.png')}}"
+    /></a>
+
+    <p>
+      La Historia Clínica recopila información sobre un grupo de pacientes que
+      padecen una enfermedad en particular. Los registros son bases de datos que
+      contienen datos cuantitativos y cualitativos sobre los pacientes.
+    </p>
+    <p>
+      La información obtenida es de gran utilidad para realizar análisis sobre
+      historia natural de la enfermedad, adherencia a tratamientos, acceso al
+      sistema de salud, eficacia de los medicamentos recetados, etc.
+    </p>
+
+    <p>Todos los campos del formulario son obligatorios</p>
+
+    <h2>Ingrese un nuevo paciente</h2>
+
+    <form method="POST" action="{{url_for('registro')}}">
+      <label>Nombre y apellido:</label><br />
+      <input type="name" name="name" /><br />
+      <label>Edad:</label><br />
+      <input type="number" name="age" /><br /><br />
+      <label>Celular:</label><br />
+      <input type="number" name="telephone" /><br /><br />
+      <label>Nacionalidad:</label><br />
+      <input type="name" name="nationality" /><br />
+      <label>Diagnóstico:</label><br />
+      <input type="name" name="diagnosis" /><br />
+      <label>Motivo de Consulta:</label><br />
+      <input type="name" name="treatment" /><br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

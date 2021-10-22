@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif", serif;
+}
+
+html {
+  font-size: 62.5%;
+  background: black;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  color: yellow;
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+form label {
+  color: white;
+  padding: 5px;
+  font-size: small;
+}
+a img {
+  width: 35rem;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: white;
+}
+th {
+  padding: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+}
+td {
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+}

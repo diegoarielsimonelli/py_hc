@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <!-- Titulo de la página-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/media/style.css" />
+
+    <title>Pacientes</title>
+  </head>
+
+  <body>
+    <h1>
+      <a
+        title="likedin de Diego Simonelli"
+        href="https://www.linkedin.com/in/diego-ariel-simonelli-87b8b986/"
+        ><img
+          src="{{url_for('static', filename='media/Historia_Clinica.png')}}"
+      /></a>
+    </h1>
+
+    <h2>¡Bienvenido/a!</h2>
+
+    <p>Ingrese un paciente para su registro:</p>
+
+    <table border="1">
+      <thead cellpadding="1.0" cellspacing="1.0">
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Motivo de Consulta</th>
+          <th>Celular</th>
+          <th>Diagnóstico</th>
+          <th>Nacionalidad</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+          <td>{{row['name']}}</td>
+          <td>{{row['age']}}</td>
+          <td>{{row['telephone']}}</td>
+          <td>{{row['nationality']}}</td>
+          <td>{{row['diagnosis']}}</td>
+          <td>{{row['treatment']}}</td>
+        </tr>
+        {% endfor %}
+      </thead>
+    </table>
+
+    <br /><br />
+
+    <form action="{{url_for('registro')}}">
+      <input class="registro" type="submit" value="Registro" />
+    </form>
+    <form action="{{url_for('api')}}">
+      <input class="api" type="submit" value="API" />
+    </form>
+  </body>
+</html>
